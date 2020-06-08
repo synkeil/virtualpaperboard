@@ -1,0 +1,65 @@
+/*  Reset  */
+.h1
+{
+  width:100%;
+  text-align: center;
+  text-transform: capitalize;
+  position:absolute;
+  top: 20px;
+  left: 0;
+  z-index: 101;
+}
+.canvas
+{
+  position: absolute;
+  top:0;
+  left:0;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+#tempCanvas {z-index: 100;}
+#canvas {z-index: 2;}
+#bgClock {z-index: 1;pointer-events: none;}
+.test {
+  pointer-events: none;
+  position: absolute; 
+  top: calc(50vh - 10px); 
+  left: calc(50vw - 50px); 
+  height: 20px; 
+  width: 100px;
+  text-align: center;
+}
+
+#mainColor,
+#mainWidth,
+#tool
+{
+  position:absolute;
+  z-index: 101;
+}
+
+#mainColor
+{
+  top: 0;
+  left: 0;
+
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  padding:0;
+  margin:0;
+
+  overflow: hidden;
+
+  border-radius: 100px;
+  -webkit-appearance: none !important;
+}
+
+#mainWidth {top: 50px}
+
+#tool {top:90px}
+
+.hide {display:none;}

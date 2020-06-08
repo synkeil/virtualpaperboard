@@ -1,0 +1,29 @@
+.canvas
+{
+  position: absolute;
+  top:0;
+  left:0;
+
+  width: 100vw;
+  height: 100vh;
+}
+#bgClock {z-index: 1;pointer-events: none;}
+.test {
+  font-family:Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+
+  pointer-events: none;
+  position: absolute; 
+  top: calc(50vh - 35px); 
+  left: calc(50vw - 50px); 
+  height: 70px; 
+  width: 100px;
+  text-align: center;
+
+  color:#f55;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}

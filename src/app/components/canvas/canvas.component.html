@@ -1,0 +1,30 @@
+<div id="canvasFullWrapper">
+  <h1 class="h1" contenteditable="true">titre éditable</h1>
+  <input type="color" name="mainColor" id="mainColor" (change)="chngColor($event)">
+  <input type="range" name="mainWidth" id="mainWidth" min="1" (change)="chngWidth($event)">
+  <select name="tool" id="tool" (change)="chngTool($event)">
+    <option value="pencil">Crayon</option>
+    <option value="rectangle">Rectangle</option>
+    <option value="circle">Cercle</option>
+    <option value="eraser">Gomme</option>
+    <option value="move">Déplacer</option>
+  </select>
+  <canvas 
+    #tempCanvasElement 
+    id="tempCanvas" 
+    (mouseup)="endPos($event)" 
+    (mousedown)="startPos($event)" 
+    (mousemove)="getPos($event)"
+    (contextmenu)="prevent($event)" 
+    class="canvas"
+  ></canvas>
+  <canvas 
+    #canvasElement 
+    id="canvas" 
+    (mouseup)="endPos($event)" 
+    (mousedown)="startPos($event)" 
+    (mousemove)="getPos($event)" 
+    class="canvas"
+  ></canvas>
+  <app-canvas-clock></app-canvas-clock>
+</div>
